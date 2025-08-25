@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Creative Industry AI Design System */
+    --background: 0 0% 95%;
+    --foreground: 0 0% 5%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 5%;
+
+    /* Creative Brand Colors - Black, Red, Yellow */
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 0 100% 50%;
+
+    --secondary: 45 100% 50%;
+    --secondary-foreground: 0 0% 8%;
+
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 98%;
+
+    --warning: 45 100% 50%;
+    --warning-foreground: 0 0% 8%;
+
+    --success: 120 60% 50%;
+    --success-foreground: 0 0% 98%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 92%;
+    --ring: 0 84% 60%;
+
+    /* Creative AI Interface Specific */
+    --ai-sidebar: 0 0% 8%;
+    --ai-sidebar-border: 0 0% 15%;
+    --ai-chat-bg: 0 0% 96%;
+    --ai-user-bubble: 0 84% 60%;
+    --ai-assistant-bubble: 0 0% 92%;
+    --ai-code-bg: 0 0% 90%;
+
+    /* Creative Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 84% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 50%), hsl(0 84% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 84% 30%), hsl(45 100% 40%));
+    --gradient-glow: linear-gradient(135deg, hsl(0 84% 60% / 0.8), hsl(45 100% 50% / 0.8));
+
+    /* Creative Shadows */
+    --shadow-ai: 0 20px 60px -10px hsl(0 0% 0% / 0.3);
+    --shadow-red: 0 10px 40px -10px hsl(0 84% 60% / 0.4);
+    --shadow-yellow: 0 10px 40px -10px hsl(45 100% 50% / 0.4);
+    --shadow-glow: 0 0 40px hsl(0 84% 60% / 0.5);
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Creative Mode */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 92%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 0 84% 70%;
+
+    --secondary: 45 100% 55%;
+    --secondary-foreground: 0 0% 8%;
+
+    --danger: 0 84% 65%;
+    --danger-foreground: 0 0% 98%;
+
+    --warning: 45 100% 55%;
+    --warning-foreground: 0 0% 8%;
+
+    --success: 120 60% 55%;
+    --success-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 84% 60%;
+
+    /* Dark Creative AI Interface */
+    --ai-sidebar: 0 0% 5%;
+    --ai-sidebar-border: 0 0% 20%;
+    --ai-chat-bg: 0 0% 8%;
+    --ai-user-bubble: 0 84% 60%;
+    --ai-assistant-bubble: 0 0% 15%;
+    --ai-code-bg: 0 0% 12%;
+
+    /* Dark Creative Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 84% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 55%), hsl(0 84% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 3%), hsl(0 84% 35%), hsl(45 100% 45%));
+    --gradient-glow: linear-gradient(135deg, hsl(0 84% 60% / 0.9), hsl(45 100% 55% / 0.9));
+
+    /* Dark Creative Shadows */
+    --shadow-ai: 0 20px 60px -10px hsl(0 0% 0% / 0.6);
+    --shadow-red: 0 10px 40px -10px hsl(0 84% 60% / 0.6);
+    --shadow-yellow: 0 10px 40px -10px hsl(45 100% 55% / 0.6);
+    --shadow-glow: 0 0 40px hsl(0 84% 60% / 0.7);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Creative AI Interface Animations */
+  .ai-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .ai-pulse {
+    animation: ai-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .creative-glow {
+    box-shadow: var(--shadow-red);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .creative-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  @keyframes ai-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes ai-gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes neon-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(0 84% 60% / 0.5), 0 0 40px hsl(0 84% 60% / 0.3); 
+    }
+    50% { 
+      box-shadow: 0 0 30px hsl(0 84% 60% / 0.8), 0 0 60px hsl(0 84% 60% / 0.5); 
+    }
+  }
+
+  .ai-gradient-animate {
+    background-size: 200% 200%;
+    animation: ai-gradient 3s ease infinite;
+  }
+
+  .creative-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+}
